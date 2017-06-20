@@ -122,5 +122,13 @@ function Article_delete($id){
     }
 
 
+    //------- МЕТОД УДАЛЕНИЯ КОММЕНТАРИЯ    ----------------------------------------------------------------------------
+    function Comment_delete($id){
+        $db = $this->db_connect();
+        $query = "DELETE FROM " . TABLE_COMMENTS_NAME . " WHERE id = " . $id;
+        $db->query($query);
+        $db->close();
+    }
+
 }
 

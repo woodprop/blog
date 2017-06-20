@@ -68,6 +68,7 @@ class C_page extends C_base
     public function Action_delete(){
         $base = M_mysql::GetInstance();
         $base->Article_delete($_GET['id']);
+        $base->Comment_delete($_GET['id']);
         header('Location: index.php?a=editor');
     }
 
