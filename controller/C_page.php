@@ -21,6 +21,10 @@ class C_page extends C_base
         $article = $base->Article_get_by_id($_GET['id']);
         $this->title .= ' | ' . $article['caption'];
         $this->content = $this->Template('views/v_article.php', $article);
+
+        $ccc = new C_comments();
+        $this->comments = $ccc->Action_show();
+
         return $this->content;
     }
 

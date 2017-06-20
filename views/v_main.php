@@ -2,7 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <title><?=$title?></title>
+    <title><?= $title ?></title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,7 +18,9 @@
     </ul>
 </menu>
 
-<?=$content?>
+<?= $content ?>
+
+<?= $comments ?>
 
 <footer><span>Konstantin Kokarev &copy; 2017</span></footer>
 </div>

@@ -1,6 +1,7 @@
 <?php
 require_once 'controller/config.php';
 include_once 'model/M_mysql.php';
+include_once 'model/M_comments.php';
 function __autoload($className){
     include_once "controller/$className.php";
 
