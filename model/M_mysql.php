@@ -31,7 +31,7 @@ class M_mysql{
 //--------------------------------------------------------------------------------------------------------------------
 
 //------- МЕТОД ДОБАВЛЕНИЯ СТАТЬИ    ----------------------------------------------------------------------------
-function Article_add($author, $caption, $text){
+    public function Article_add($author, $caption, $text){
     $db = $this->db_connect();
     $query = "INSERT INTO " . TABLE_NAME . " (author, caption, text) VALUES ('" . $author . "','" . $caption . "','" . $text . "')";
     $db->query($query);
