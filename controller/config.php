@@ -5,3 +5,4 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'blog');
 define('TABLE_NAME', 'articles');
+define('TABLE_COMMENTS_NAME', 'comments');

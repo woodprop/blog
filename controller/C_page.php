@@ -22,10 +22,13 @@ class C_page extends C_base
         $this->title .= ' | ' . $article['caption'];
         $this->content = $this->Template('views/v_article.php', $article);
 
+        if ($this->IsPost()){
+            $base->Article_comment_add($_GET['id'], $_POST['comment_author'], $_POST['comment_text']);
+        }
         $ccc = new C_comments();
         $this->comments = $ccc->Action_show();
 
-        return $this->content;
+//        return $this->content;
     }
 
     public function Action_edit()

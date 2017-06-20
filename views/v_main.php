@@ -18,9 +18,10 @@
     </ul>
 </menu>
 
-<?= $content ?>
+<section><?= $content ?></section>
 
-<?= $comments ?>
+
+<section><?= $comments ?></section>
 
 <footer><span>Konstantin Kokarev &copy; 2017</span></footer>
 </div>

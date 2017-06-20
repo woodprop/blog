@@ -3,6 +3,8 @@ body{
 
 }
 
+
+
 .main_container {
     position: relative;
     width: 900px;
@@ -23,6 +25,9 @@ header{
     font-family: "Arial Black";
 }
 
+section{
+    position: relative;
+}
 
 /*---------------------------- МЕНЮ ----------------------------------*/
 
@@ -58,7 +63,7 @@ menu ul li:last-child::after{
 
 
 footer{
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,3 +80,18 @@ textarea{
     resize: none;
 }
 
+.comment_form {
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.comment_form textarea{
+    width: 90%;
+    height: 50px;
+}
+
+.comment {
+    position: relative;
+    border: 1px solid gray;
+    border-radius: 20px;
+}

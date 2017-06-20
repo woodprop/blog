@@ -8,7 +8,6 @@ abstract class C_base extends C_controller{
     function __construct()
     {
         $this->title = 'Уютненький бложеГ ';
-        $this->comments = 'comments';
     }
 
     public function render(){

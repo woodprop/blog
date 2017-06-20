@@ -95,5 +95,32 @@ function Article_delete($id){
 
 //--------------------------------------------------------------------------------------------------------------------
 
+//------- МЕТОД ПОЛУЧЕНИЯ ККОММЕНТАРИЕВ ПО ID  -----------------------------------------------------------------------
+    public function Article_get_comments($id){
+        $db = $this->db_connect();
+        $query = "SELECT * FROM " . TABLE_COMMENTS_NAME . " WHERE id = " . $id . " ORDER by date DESC";
+        $result = $db->query($query);
+
+        $array = [];
+        while($row = $result->fetch_array(MYSQLI_ASSOC)){
+            $array[] = $row;
+        }
+        $db->close();
+
+//    var_dump($array);
+
+        return $array;
+    }
+
+    //------- МЕТОД ДОБАВЛЕНИЯ КОММЕНТАРИЯ    ----------------------------------------------------------------------------
+    public function Article_comment_add($id, $author, $comment){
+        $db = $this->db_connect();
+        $query = "INSERT INTO " . TABLE_COMMENTS_NAME . " (id, author, comment) VALUES ('" . $id . "','" . $author . "','" . $comment . "')";
+        $db->query($query);
+        $db->close();
+        return true;
+    }
+
+
 }
 
