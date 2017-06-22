@@ -8,6 +8,8 @@ class C_page extends C_base
     {
         $this->title .= ' | Список статей';
 
+
+
         $base = M_mysql::GetInstance();
         $article_list = $base->Article_get_list();
 

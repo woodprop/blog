@@ -11,6 +11,9 @@
     <header>
         <h1>BloG FrameworK</h1>
     </header>
+
+    <section><?= $user ?></section>
+
 <menu>
     <ul>
         <li><a href="index.php">Главная</a></li>
