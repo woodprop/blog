@@ -4,7 +4,7 @@ abstract class C_base extends C_controller{
     protected $title;
     protected $content;
     protected $comments;
-    protected $user;
+    protected $userName;
 
     function __construct()
     {

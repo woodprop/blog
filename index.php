@@ -2,11 +2,12 @@
 require_once 'controller/config.php';
 include_once 'model/M_mysql.php';
 include_once 'model/M_comments.php';
+
 function __autoload($className){
     include_once "controller/$className.php";
-
 }
 
+var_dump($_POST);
 
 // Определяем переданное действие
 $action = 'Action_';
@@ -15,7 +16,6 @@ if (isset($_GET['a'])){
 }
 else $action .= 'index';
 //-----------------------------
-
 
 
 // Генерируем и выводим страницу
