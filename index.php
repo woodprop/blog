@@ -2,12 +2,15 @@
 require_once 'controller/config.php';
 include_once 'model/M_mysql.php';
 include_once 'model/M_comments.php';
+include_once 'model/M_user.php';
 
 function __autoload($className){
     include_once "controller/$className.php";
 }
+session_start();
+if (!isset($_SESSION['userType'])) $_SESSION['userType'] = 333;
+//var_dump($_SESSION);
 
-var_dump($_POST);
 
 // Определяем переданное действие
 $action = 'Action_';

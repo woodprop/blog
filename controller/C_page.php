@@ -79,6 +79,16 @@ class C_page extends C_base
     {
         $this->title .= ' | Список статей';
 
+        //------------
+        if ($_SESSION['userType'] != 1){
+            $this->content = $this->Template('views/v_error.php', array('errorText' => 'У Вас нет доступа к данному разделу'));
+            return $this->content;
+        }
+
+
+        //------------
+
+
         $base = M_mysql::GetInstance();
         $article_list = $base->Article_get_list();
 

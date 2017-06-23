@@ -7,11 +7,17 @@ class C_user extends C_base {
 
     public function __construct()
     {
-        session_start();
+        $m_user = M_user::GetInstance();
         if (isset($_POST['login'])) {
-            $this->userName = $_POST['login'];
+//            $this->userName = $_POST['login'];
 
-            $_SESSION['userName'] = $this->userName;
+            if ($m_user->LogIn($_POST['login'], $_POST['password'])){
+                $this->userName = $_POST['login'];
+                $_SESSION['userName'] = $this->userName;
+
+            }
+
+
         }
         else{
 
@@ -26,6 +32,7 @@ class C_user extends C_base {
         if (isset($_POST['logout'])){
             session_destroy();
             $this->userName = null;
+            header('Location: index.php');
         }
 
 
